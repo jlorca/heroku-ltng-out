@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://testout-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+</head>
+
+<body>
+  <script>
+    $Lightning.use("c:TestFormApp", //  app name
+      function(){
+        $Lightning.createComponent(
+          "c:TestForm", // component name
+          {},
+          "sfContainer", // unique id
+          function(cmp){ console.log('component created'); }
+        );
+      },
+      'https://testout-dev-ed.lightning.force.com/', // instance url
+      '3MVG9X0_oZyBSzHrnzENhROatHPrd3SgoJ2r4Qy5SsxRmvqZ3lRQvIXsocH5edlmhG3bxIlqhu.NDC4pfrkzr'  // access token
+    );
+  </script>
+  <div id="sfContainer"></div>
+</body>
+
+</html>
