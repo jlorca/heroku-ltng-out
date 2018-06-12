@@ -9,9 +9,6 @@
   <div>DIV BEFORE sfContainer</div>
   <div id="sfContainer"></div>
    <script>
-    var url = $.cookie("InstURL");
-    url = url.replace("my.salesforce", "lightning.force");
-    alert('url = ' + url);
     $Lightning.use("c:MyLCOutApp", //  app name
       function(){
         $Lightning.createComponent(
