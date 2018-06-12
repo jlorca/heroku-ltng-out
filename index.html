@@ -9,6 +9,10 @@
   <div>DIV BEFORE sfContainer</div>
   <div id="sfContainer"></div>
    <script>
+    if (window.location.protocol != "https:" && window.location.hostname != 'localhost'){
+      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    }
+
     $Lightning.use("c:MyLCOutApp", //  app name
       function(){
         $Lightning.createComponent(
