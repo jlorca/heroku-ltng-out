@@ -6,20 +6,6 @@
 </head>
 
 <body>
-  <!--<script>
-    $Lightning.use("c:ParkinsonOMApp", //  app name
-      function(){
-        $Lightning.createComponent(
-          "c:ParkinsonOMComp", // component name
-          {},
-          "sfContainer", // unique id
-          function(cmp){ console.log('component created'); }
-        );
-      },
-      'https://parkinsonnetcrm--acc.lightning.force.com/', // instance url
-      '3MVG9X0_oZyBSzHrv0ADl_we_iD0Fr.5jcuRjhyy5qwzkenZ9ak_UE1NBT6ysMvKLiPEvecWoAQp6YeyPiGgO'  // access token
-    );
-  </script>-->
   <div>DIV BEFORE sfContainer</div>
   <div id="sfContainer"></div>
    <script>
@@ -32,7 +18,7 @@
           function(cmp){ console.log('component created'); }
         );
       },
-      'https://testout-dev-ed.my.salesforce.com', // instance url
+      'https://testout-dev-ed.my.salesforce.com/', // instance url
       '3MVG9TSaZ8P6zP1qfO1fRurbQxWcjmZJCLEn1fRWnVzO3xPTabBjQHrI5607S1k0c9JnZousFwLeEJ2QvOThP'
     );
   </script>
