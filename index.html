@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="https://testout-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+  </head>
 
-<head>
-  <script src="https://testout-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
-</head>
+  <body>
+      <div>DIV BEFORE sfContainer</div>
+      <div id="sfContainer"></div>
+       <script>
+        window.location.href = 'https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=3MVG9TSaZ8P6zP1qfO1fRurbQxWcjmZJCLEn1fRWnVzO3xPTabBjQHrI5607S1k0c9JnZousFwLeEJ2QvOThP&redirect_uri=https://jlorca-jlightning-out-1.herokuapp.com/'
 
-<body>
-  <div>DIV BEFORE sfContainer</div>
-  <div id="sfContainer"></div>
-   <script>
-    if (window.location.protocol != "https:" && window.location.hostname != 'localhost'){
-      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-    }
-
-    $Lightning.use("c:MyLCOutApp", //  app name
-      function(){
-        $Lightning.createComponent(
-          "c:MyLCOut", // component name
-          {},
-          "sfContainer", // unique id
-          function(cmp){ console.log('component created'); }
+        $Lightning.use("c:MyLCOutApp", //  app name
+          function(){
+            $Lightning.createComponent(
+              "c:MyLCOut", // component name
+              {},
+              "sfContainer", // unique id
+              function(cmp){ console.log('component created'); }
+            );
+          },
+          'https://testout-dev-ed.lightning.force.com', // instance url
+          '3MVG9TSaZ8P6zP1qfO1fRurbQxWcjmZJCLEn1fRWnVzO3xPTabBjQHrI5607S1k0c9JnZousFwLeEJ2QvOThP'
         );
-      },
-      'https://testout-dev-ed.lightning.force.com', // instance url
-      '3MVG9TSaZ8P6zP1qfO1fRurbQxWcjmZJCLEn1fRWnVzO3xPTabBjQHrI5607S1k0c9JnZousFwLeEJ2QvOThP'
-    );
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
