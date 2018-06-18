@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://testout-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://jesus-ff-java-00-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
   </head>
 
   <body>
       <div>DIV BEFORE sfContainer</div>
       <div id="sfContainer"></div>
-       <script>
+       <!--<script>
         window.location.href = 'https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=8603299847298338315&redirect_uri=https://jlorca-jlightning-out-1.herokuapp.com/'
 
         $Lightning.use("c:MyLCOutApp", //  app name
@@ -20,8 +20,23 @@
             );
           },
           'https://testout-dev-ed.lightning.force.com', // instance url
-          '3MVG9TSaZ8P6zP1qfO1fRurbQxWcjmZJCLEn1fRWnVzO3xPTabBjQHrI5607S1k0c9JnZousFwLeEJ2QvOThP'
+          'Bearer 3MVG9TSaZ8P6zP1qfO1fRurbQxWcjmZJCLEn1fRWnVzO3xPTabBjQHrI5607S1k0c9JnZousFwLeEJ2QvOThP'
         );
+    </script>-->
+
+    <script>
+      $Lightning.use("c:DisplayContactsLOApp", //  app name
+      function(){
+        $Lightning.createComponent(
+          "c:DisplayContactsLO", // component name
+          {},
+          "sfContainer", // unique id
+          function(cmp){ console.log('component created'); }
+        );
+      },
+      'https://jesus-ff-java-00-dev-ed.lightning.force.com', // instance url
+      '00D0N000001cECt!AQ0AQDEzWpKGeyvkiyyY2b6ZihvrTzug1RXypjzap3fjBsdhoqDNiOSbBKvBqX8cT46oTUqvxFlcI3F9W0O9NPVKVA9.zqBY'
+    );
     </script>
   </body>
 </html>
