@@ -5,7 +5,6 @@
   </head>
 
   <body>
-      <div>DIV BEFORE sfContainer</div>
       <div id="sfContainer"></div>
        <!--<script>
         window.location.href = 'https://login.salesforce.com/services/oauth2/authorize?display=popup&response_type=token&client_id=8603299847298338315&redirect_uri=https://jlorca-jlightning-out-1.herokuapp.com/'
@@ -24,7 +23,7 @@
         );
     </script>-->
 
-    <script>
+    <!--<script>
       $Lightning.use("c:DisplayContactsLOApp", //  app name
       function(){
         $Lightning.createComponent(
@@ -37,6 +36,27 @@
       'https://jesus-ff-java-00-dev-ed.lightning.force.com', // instance url
       '00D0N000001cECt!AQ0AQDEzWpKGeyvkiyyY2b6ZihvrTzug1RXypjzap3fjBsdhoqDNiOSbBKvBqX8cT46oTUqvxFlcI3F9W0O9NPVKVA9.zqBY'
     );
-    </script>
+    </script>-->
+
+    <div style="text-align:center"> 
+      <button onclick="playPause()">Play/Pause</button> 
+      <br><br>
+      <video id="video1" width="420">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML5 video.
+      </video>
+    </div> 
+
+    <script> 
+      var myVideo = document.getElementById("video1"); 
+
+      function playPause() { 
+          if (myVideo.paused) 
+              myVideo.play(); 
+          else 
+              myVideo.pause(); 
+      }
+    </script> 
   </body>
 </html>
